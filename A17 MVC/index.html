@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Todo List</h1>
+  <form id="todo-form">
+    <input type="text" id="input-todo" placeholder="Add a new todo">
+    <button type="submit">Add</button>
+  </form>
+  <ul id="todo-list"></ul>
+
+  <script src="model.js"></script>
+  <script src="view.js"></script>
+  <script src="controller.js"></script>
+  <script>
+    const model = new TodoModel();
+    const view = new TodoView();
+    new TodoController(model, view);
+  </script>
+</body>
+</html>
